@@ -1,0 +1,13 @@
+* typie
+
+A tool to unlock OpenBSD crypto volumes via SSH (serial console).
+
+** Usage
+
+```
+typie ssh://user@consoleserver
+
+# or
+
+typie ssh://user@consoleserver:2222
+```
