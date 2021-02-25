@@ -12,6 +12,11 @@ typie ssh://user@consoleserver
 typie ssh://user@consoleserver:2222
 #+end_src
 
+** SSH
+
+~typie~ will use ssh keys in your currently running ~ssh-agent~. It will also
+compare pub keys to your existing ~known_hosts~ file.
+
 ** Install
 
 #+begin_src shell
