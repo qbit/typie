@@ -11,3 +11,9 @@ typie ssh://user@consoleserver
 
 typie ssh://user@consoleserver:2222
 #+end_src
+
+** Install
+
+#+begin_src shell
+go get -u suah.dev/typie
+#+end_src
