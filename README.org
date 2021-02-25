@@ -4,10 +4,10 @@ A tool to unlock OpenBSD crypto volumes via SSH (serial console).
 
 ** Usage
 
-```
+#+begin_src shell
 typie ssh://user@consoleserver
 
 # or
 
 typie ssh://user@consoleserver:2222
-```
+#+end_src
