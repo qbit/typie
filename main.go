@@ -99,7 +99,7 @@ func main() {
 	}
 	defer e.Close()
 
-	fmt.Print("Watching...")
+	log.Println("Watching...")
 	for {
 		_, err := e.ExpectBatch([]expect.Batcher{
 			&expect.BExp{R: "Passphrase: "},
@@ -109,12 +109,11 @@ func main() {
 		}, timeout)
 
 		if err != nil {
-			if err == expect.TimeoutError(timeout) {
-				// Hi our timeout
-				fmt.Print(".")
-			} else {
+			if err != expect.TimeoutError(timeout) {
 				log.Fatal(err)
 			}
+		} else {
+			log.Println("sent passphrase")
 		}
 
 		time.Sleep(3)
